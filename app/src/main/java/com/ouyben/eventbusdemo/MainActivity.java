@@ -42,14 +42,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
     }
-// TODO: 主线程操作
+
+    // TODO: 主线程操作
     //@Subscribe
-//    public void onEventMainThread(MessageEvent event) {
-//        String msg = "onEventMainThread收到了消息：" + event.getMessage();
-//        Log.d("harvic", msg);
-//        main_tv.setText(msg);
-//        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
-//    }
+    //    public void onEventMainThread(MessageEvent event) {
+    //        String msg = "onEventMainThread收到了消息：" + event.getMessage();
+    //        Log.d("harvic", msg);
+    //        main_tv.setText(msg);
+    //        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    //    }
     // TODO: 子线程
     @Subscribe
     public void onEvent(MessageEvent event) {
@@ -58,6 +59,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         main_tv.setText(msg);
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
+
+//    public void onEventMainThread(MessageEvent event) {
+//    }
+//
+//    public void onEventPostThread(MessageEvent event) {
+//
+//    }
+//
+//    public void onEventBackgroundThread(MessageEvent event) {
+//
+//    }
+//
+//    public void onEventAsync(MessageEvent event) {
+//
+//    }
 
     private void initView() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
